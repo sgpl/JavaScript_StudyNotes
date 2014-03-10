@@ -134,3 +134,47 @@ NaN == NaN and NaN === NaN return false
 
 - object is a collection of properties. the properties can be any of the previously mentioned types as well as other objects and functions. 
 
+
+<h3>operations</h3>
+
+var fname, lname, fullName;
+
+fname = "John"; 
+lname = "Smith";
+fullName = fname + " " + lname; // full name is "John Smith"
+
+---
+
+var widgets, gizmos, inventory;
+
+widgets = 333; 
+gizmos = 234; 
+inventory = widgets + gizmos; // sum of both
+
+---
+
+var provincial, federal, subtotal, total; 
+
+provincial = 0.097; 
+federal = 0.977; 
+subtotal = 10; 
+total = (subtotal * provincial) + (subtotal * federal); 
+
+---
+
+% is the symbol for modulus or remainder. 
+
+
+----
+
+<h5>dangers of loose typing</h5>
+
+- can type strings instead of numbers. 
+
+var johnTaskCount = 11,
+    janeTaskCount = "42",
+    totalTaskCount = johnTaskCount + janeTaskCount; // results in concatenation of 1142 instead of 53
+
+<h4>type conversion (type coercion) </h4>
+
+- 

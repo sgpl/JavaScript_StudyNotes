@@ -31,13 +31,106 @@ __DOM = Document Object Model__
 - we can write js that interacts with html via manipulation of the DOM 
 - if we access the DOM before the browser has finished building it, we get errors. 
 
-- with a <script> tag in the docs head, the code will execute rightaway even if the DOM is yet to b built. and any reference to DOM elements will result in an error because the HTML inside the <body> isn't there yet. 
+- with a <__script__> tag in the docs head, the code will execute rightaway even if the DOM is yet to b built. and any reference to DOM elements will result in an error because the HTML inside the <body> isn't there yet. 
 
 - to deal with ^ this, we can: 
-	- wrap code in document's _onload_ function (which executes once the DOM has been constructed), or 
-	- include <script> tags at the very end of the document's body before the closing of the body tag. 
+	- wrap code in document's __onload__ function (which executes once the DOM has been constructed), or 
+	- include <__script__> tags at the very end of the document's body before the closing of the body tag. 
 
 - refer to chapter 1 for a more thorough read. 
 
 ----
+
+<h4>chapter 2</h4>
+
+
+<b>variables</b>
+
+- stores data so that we can manipulate it. programming is essentially manipulation of data. 
+- <b>camel casing</b>: first letter is lower case, the next word might be upper case
+	- length, width, firstName, lastName, etc
+
+<b>comments</b>
+
+- // double slash 
+
+- multiline comments: 
+/*
+
+*/
+
+
+<b>declarations</b>
+
+- declaring a variable
+var task = "Task one goes here."; 
+
+- can also do this: (declaring two variables at once)
+var task = "Task one goes here.", 
+	complete = true; 
+
+<h6>note</h6> 
+- js is case sensitive so Task != task 
+- terminate lines with semi colon ';'
+
+<b>declarations</b>
+
+- good practice to keep declaration and initialization separate, so: 
+
+// declarations
+var task, complete;
+
+// initialization
+task = "first task"; 
+complete = true;
+
+
+<b>types</b>
+
+- js is a loosely typed language unlike C or Java (which are strongly typed)
+- don't need to be explicit about declaring types
+- can change types of variables on the fly
+
+<b>six types</b>: 
+
+1. number, 
+2. string, 
+3. Boolean, 
+4. null, 
+5. undefined, and 
+6. object
+
+----
+
+###### 1. number
+
+- only numeric type in JavaScript
+- can hold a set of all possible Number values including: 
+Not-a-Number (NaN), positive, negative, infinity and negative infinity. 
+
+- NaN: special value that is returned when math function fails, so (Math.abs("foo")), or when trying to parse a number fails. 
+- also only value in JavaScript that doesn't equal itself so 
+NaN == NaN and NaN === NaN return false
+- there is an __isNaN__ fxn to verify if returned value is actually NaN. the return value of this function can be __confusing_
+
+
+###### 2. string
+
+- holds all possible string values
+
+###### 3. Boolean
+
+- true and false
+
+###### 4. null
+
+- when you want to declare a variable and intentionally express the absence of a value ( unlike undefined where the value is simply absent). 
+
+###### 5. undefined
+
+- represents the state of a variable that's been declared without a value being assigned to it. 
+
+###### 6. object
+
+- object is a collection of properties. the properties can be any of the previously mentioned types as well as other objects and functions. 
 

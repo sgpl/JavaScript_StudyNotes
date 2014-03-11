@@ -177,4 +177,28 @@ var johnTaskCount = 11,
 
 <h4>type conversion (type coercion) </h4>
 
-- 
+- converts number to string in case of conflict
+- converts boolean to value 0 or 1 in case of addition
+
+<h6>comparison operators</h6>
+
+- less than, greater than is simple for 
+- == for boolean. // returns true if both values are true
+
+1 == 1 	 	// true
+"1" == 1 	// true because "1" converts to 1
+1 == true 	// true
+0 == false 	// true
+"" == 0 	// true
+" " == 0 	// true
+
+
+0 == 1 		// false
+1 == false 	// false
+0 == true 	// false
+
+var x, y;
+x = {};
+y = x;
+x == y; 	// returns true (refers to same object in memory)
+x == {};	// returns FALSE (## WHY?) (not the same object). 

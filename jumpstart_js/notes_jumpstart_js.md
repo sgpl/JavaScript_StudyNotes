@@ -183,7 +183,10 @@ var johnTaskCount = 11,
 <h6>comparison operators</h6>
 
 - less than, greater than is simple for 
-- == for boolean. // returns true if both values are true
+
+----
+
+== for boolean. // returns true if both values are true
 
 1 == 1 	 	// true
 "1" == 1 	// true because "1" converts to 1
@@ -201,4 +204,46 @@ var x, y;
 x = {};
 y = x;
 x == y; 	// returns true (refers to same object in memory)
-x == {};	// returns FALSE (## WHY?) (not the same object). 
+x == {};	// returns FALSE (## WHY?) (not the same object) wth?.
+
+----
+
+not equals != 
+
+0 != 1     // returns true
+1 != false // returns true
+0 != true  // returns true
+
+
+var x, y;  // declare x and y
+x = {};
+y = x;
+x != y; 	// returns false (refers to same object in memory)
+x != {};	// returns true (not the same object) ^ see the "==" stuff. 
+
+---
+
+strct equal (===)
+
+- no conversion of types in a strict equal 
+
+1 === 1 	// returns true
+"1" === 1 	// returns false
+1 === true  	// returns false
+0 === false 	// returns false
+"" === 0 	// returns false
+"  " === 0  	// returns false
+0 === 1 	// returns false
+1 === false 	// returns false
+0 === true 	// returns false
+
+var x, y; 
+x = {};
+y = x; 
+x === y;	// returns true (refers to same object in memory)
+x === {};	// returns false (not same object)
+
+---
+
+strict not equals (!==)
+

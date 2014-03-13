@@ -247,3 +247,37 @@ x === {};	// returns false (not same object)
 
 strict not equals (!==)
 
+1 !== 1 	// false
+"1" !== 1 	// true
+1 !== true  	// true
+0 !== false 	// true
+"" !== 0 	// true
+"  " !== 0  	// true
+0 !== 1 	// true
+1 !== false 	//  true
+0 !== true 	// true
+
+
+var x, y;
+x = {};
+y = x;
+x !== y;  // returns false (refers to same object in memory)
+x !== {}; // returns true (not the same object)
+
+
+---
+
+1 > 1 // false
+2 > " " // returns true because (" " converts to 0)
+
+0 >= 1 // false
+1 >= 1 // true
+"1" >= 1 // true ("1" converts to 1)
+
+
+--- 
+
+<h5>logic flow</h5>
+
+var d, hours, minutes, time, message; 
+

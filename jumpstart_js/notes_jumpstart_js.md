@@ -39,7 +39,7 @@ __DOM = Document Object Model__
 
 - refer to chapter 1 for a more thorough read. 
 
-----
+###### ================================
 
 <h4>chapter 2</h4>
 
@@ -350,3 +350,57 @@ task3 = "Do something interesting with my life";
 - learned about variables, data types, operators, basic control flow. 
 - these are building blocks of all JS programs
 - review this sometime again as this is all critical info. 
+
+
+###### ================================
+
+<h4>chapter 3</h4>
+
+<h6> Arrays </h6>
+
+- creating an array 
+
+var myArray = new Array();
+
+OR
+
+var myArray = [];
+
+- [] notation is called the array literal and represents an empty array 
+- safer to use array literal because Array constructor can be overwritten and potentially replaced with malicious code
+
+var myArray = [3, 4, 6, 8, 2, 44];
+var fruit = ["mango", "guava", "pineapple"];
+var mixedCase = ["mango", 34, 4, 5,  "guava", 455, "pineapple"];
+
+<h6>adding to an array </h6>
+
+- by index: // note indices start at 0
+
+var myArray = [];
+myArray[0] = "hello";
+myArray[1] = "world!";
+
+- can also have named indices // this creates associative array 
+- associative arrays are discouraged. preferred way to store data with named indices is by using objects // in next chapter. 
+
+var myArray = [];
+myArray["fruit"] = "apple";
+myArray["vegetable"] = "pumpkin";
+
+- can also push objects, so 
+myArray.push("newThing");
+
+
+<h6>reading from array </h6>
+
+// notice that a comma has been used. 
+var myValue,
+	myArray = ["Hello", "World", "I", "am", "an", "array"];
+
+myValue = myArray[4]; // returns "an"
+
+
+<h6>nested arrays</h6>
+
+- start from here

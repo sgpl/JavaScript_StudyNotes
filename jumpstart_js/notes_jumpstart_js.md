@@ -279,5 +279,24 @@ x !== {}; // returns true (not the same object)
 
 <h5>logic flow</h5>
 
+// declaring variables d, hoursm minutes, time, message
 var d, hours, minutes, time, message; 
 
+// get current time's hour and minute components
+d = new Date(); // not clear what is happening here? does Date have hours and minutes?
+hours = d.getHours();
+minutes = d.getMinutes();
+
+// make sure that the hour is a double digit string
+if (hours < 10) { 
+	hours = "0" + hours; // converts hours into string
+} else {
+	hours = hours.toString(); // toString converts to string
+}
+
+// Make sure that the minutes are a double digit string
+if (minutes < 10) {
+	minutes = "0" + minutes; // converts to string 
+}
+
+// 

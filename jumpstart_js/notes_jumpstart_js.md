@@ -321,3 +321,32 @@ if (time >= 0000 && time < 1200) {
 } 
 
 alert(message);
+
+-----
+
+__ternary operator__
+
+- condition ? expression1 : expression2
+- evaluates to expression1 when true and expression2 when false
+
+// could do this
+hours = (hours < 10) ? "0" + hours : hours.toString();
+
+------
+------
+
+<h6>start of project</h6>
+
+- task manager in js
+
+var task1, task2, task3;
+
+task1 = "Pay phone bill"; 
+task2 = "Complete this book"; 
+task3 = "Do something interesting with my life"; 
+
+<h4>summary of chapter</h4>
+
+- learned about variables, data types, operators, basic control flow. 
+- these are building blocks of all JS programs
+- review this sometime again as this is all critical info. 

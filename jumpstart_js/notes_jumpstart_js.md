@@ -7,7 +7,8 @@
 <h5>preface</h5>
 
 - powerful, ubiquitous programming language
-- one of the most popular languages in the world
+- oe
+ of the most popular languages in the world
 - all modern web browsers use js
 - defacto scripting for the web
 
@@ -403,4 +404,103 @@ myValue = myArray[4]; // returns "an"
 
 <h6>nested arrays</h6>
 
-- start from here
+- arrays within arrays
+
+var yusuf, dreamers;
+
+yusuf = [];
+dreamers = ["cobb", "arthur", "ariadne", "saito", "fischer"];
+
+var x_dreamer = dreamers[1]; // arthur
+
+======
+
+what if dreamers wasn't a named array but merely defined inline?
+
+var yusuf; 
+yusuf = [["cobb", "arthur", "ariadne", "saito", "fischer"]];
+
+how do we get arthur now?
+
+var x_dreamer = yusuf[0][1]; // this is what i'd do. 
+
+
+var reality = ["yusuf", ["arthur", ["eames", ["cobb", "ariadne", "saito", "fischer"]]]];
+
+reality[0]; 			 // returns "yusuf" 
+reality[1][0]; 			 // returns "arthur"
+reality[1][1][0]; 		 // returns "eames"
+reality[1][1][1][0]; 	 // returns "cobb"
+reality[1][1][1][1]; 	 // returns "ariadne"
+reality[1][1][1][2]; 	 // returns "saito"
+reality[1][1][1][3]; 	 // returns "fischer" 
+
+<h6>what can we do with arrays</h6>
+
+- seven widely used mutator methods: 
+	- __pop, push, reverse, sort, shift, splice, unshift__
+
+- four widely used accessor methods:
+	- __concat, join, slice, toString__
+
+- other accessor methods: 
+	- indexOf, lastIndexOf, 
+
+- iteration methods: 
+	- forEach, every, some, filter, map
+
+- reduce, reduceRight iteration methods in JavaScript 1.8 or higher. 
+
+
+<h6> mutator methods</h6>
+
+- __pop__: removes last element and returns it 
+
+var tasks = [
+	"Pay phone bill", 
+	"Write bestselling novel", 
+	"Walk the dog"
+	];
+
+tasks.pop(); // returns "Walk the dog"
+
+- __push__ : will add an item to the end of array and return array's new length // length is different than index
+
+var tasks = [
+	"Pay phone bill", 
+	"Write bestselling novel", 
+	"Walk the dog"
+	];
+
+tasks.push("Do something else"); // returns 4
+/* task is now [
+	"Pay phone bill", 
+	"Write bestselling novel", 
+	"Walk the dog",
+	"Do something else"
+	];
+*/
+
+- __reverse__ : reverses the order of items in an array 
+
+tasks.reverse(); // assuming tasks is defined
+
+- __shift__ : removes __first__ item in an array and returns it. like the opposite of __pop__
+
+var tasks = [
+	"Pay phone bill", 
+	"Write bestselling novel", 
+	"Walk the dog"
+	];
+
+tasks.shift(); // returns "Pay phone bill"
+
+
+- __sort__ : sorts everything in ascending order
+	- everything (numbers, strings, etc) is converted to strings and then compared. 
+
+^^ so [3, 10, 1, 2] // sorting returns [1, 10, 2, 3] because lexically 10 comes before 2 because it starts with 1. 
+
+- __splice__ : 
+- __unshift__ : 
+- 

@@ -639,5 +639,110 @@ array.lastIndexOf(searchElement, [fromIndex]);
 
 <h6>iteration methods</h6>
 
-- forEach
+- forEach (js 1.6)
 
+
+// for loop: 
+var arr, i, num, total;
+
+arr = [3, 2, 5, 5, 1, 8, 34, 87]
+total = 0;
+
+for (i = 0; i < arr.length; i = i + 1) {
+	num = arr[i];
+	total = total + num; 
+} 
+
+alert("The total is: " + total); 
+// initialization (i=0)
+// condition (i < arr.length)
+// final expression (i = i+1)
+
+
+// forEach loop: 
+
+var arr, total; 
+
+arr = [2, 3, 4, 13, 53, 55]; 
+total = 0;
+
+arr.forEach(function(num) {
+	total = total + num; 
+});
+
+// anonymous function is passed that receives a alue as an argument and places it in the variable num. 
+
+----
+
+- map (js 1.6)
+
+var arr = [1, 2, 3, 4, 5]; 
+var squared; 
+
+squared = arr.map(function(num) { 
+	return (num * num);
+}); // squared = [1, 4, 9, 16, 25]
+
+----
+
+- every (js 1.6)
+
+runs a callback fxn against each item in the array. 
+will return true if they all conform, or false if one or more fails to. 
+
+var arr, isValid;
+
+arr = [2, 4, 5, 2, 6, 3]; 
+isValid = arr.every(function(num) {
+	return (num < 10); 
+)}; // isValid is true
+
+alert("Data is : " + isValid );
+
+---
+
+- some (js 1.6)
+
+to check if one or more of the items in an array conform to a test. some works just like every but will return true as long as one array item returns true
+
+var arr, isValid;
+
+arr = [1, 2, 4, 5, 23, 99 ];
+
+isValid = arr.some(function(num) {
+	return (num < 2);
+}); // returns true because there is one element that is less than true
+
+----
+
+- filter (js 1.6)
+
+works like every and some. except that any item that passes your criteria is copied into a new array: 
+
+var arr, filtered; 
+
+arr = [1, 3, 5, 6, 7, 8, 9, 120];
+filtered = arr.filter(function(num) { 
+return (num < 5);
+});
+// filtered now contains [1, 3]
+
+---
+
+- reduce and reduceRight (js 1.8)
+## need to re-read the explaination and summarize it again
+
+var arr, total; 
+
+arr = [1, 2, 3, 4, 5];
+total = arr.reduce(function(previous, current) {
+	return previous + current;
+}); // total is 15
+
+// reduceRight performs the same function except in reverse
+
+<h6>summary</h6>
+
+- introduced arrays, and number of methods for working with arrays. 
+- on JavaScript arrays are actually objects, so to truly understand arrays, we need to understand objects as well. 
+- objects in next chapter. 

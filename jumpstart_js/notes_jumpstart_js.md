@@ -501,6 +501,61 @@ tasks.shift(); // returns "Pay phone bill"
 
 ^^ so [3, 10, 1, 2] // sorting returns [1, 10, 2, 3] because lexically 10 comes before 2 because it starts with 1. 
 
-- __splice__ : 
-- __unshift__ : 
-- 
+^^ thankfully sort lets you pass in a custom comparison function: 
+
+array.sort([compare]);
+// allows us to compare stuff using our own compare criteria. 
+
+- __splice__ : lets you perform selective surgery on an array, allowing you to simultaneously add and remove items from an array with just one command: 
+
+array.splice(index, howMany[, element1, ...[, elementN]]);
+
+var tasks = [
+	"Pay phone bill", 
+	"Write bestselling novel", 
+	"Walk the dog"
+];
+
+tasks.splice(1, 1, "World domination");
+// task is now: 
+//	["Pay phone bill", 
+//	"World domination", 
+//	"Walk the dog"];
+
+
+// what is happening above?
+
+- start at index of 1, remove 1 item and then insert "World domination" in that position. 
+
+// can also insert multiple: 
+tasks.splice(1, 1, "World domination", "Rotate tires", "Hire hit squad");
+
+// also this without inserting anything: 
+
+task = tasks.splice(1, 1); 
+// returns "Write best-selling novel"
+alert("REMINDER! Don't forget to: " + task);
+
+
+// __alert__ is the basic way to attract user's attention. 
+
+
+- __unshift__ : adds one or more items to the beginning of the array and returns the array's new length: 
+
+var tasks, len; 
+
+tasks = [
+	"Pay phone bill", 
+	"Write best-selling novel", 
+	"Walk the dog"
+]; 
+
+len = tasks.unshift("Defeat nemesis", "Pick up dry cleaning"); 
+
+alert("You now have " + len + " tasks to complete: " + tasks.join(", "));
+
+
+---
+
+<h6>accessor methods</h6>
+

@@ -559,3 +559,85 @@ alert("You now have " + len + " tasks to complete: " + tasks.join(", "));
 
 <h6>accessor methods</h6>
 
+- __concat__ : combine two arrays into one 
+
+var ar1, ar2, ar3, ar4; 
+
+ar1 = ["task 1"]; 
+ar2 = ["task 2"]; 
+ar3 = ["task 3"]; 
+ar4 = ar1.concat(ar2, ar3);
+
+// ar4 contains: ["task 1", "task 2", "task 3"];
+
+
+- __join__ : joins values in an array into strings
+
+var nums; 
+nums = [3, 2, 4, 5, 1];
+alert("the numbers in the winning lottery are: " + nums.join(", "));
+
+ - __slice__ : shallow copies part of an array and returns it. (so if original array changes, the copy will also change)
+
+ rather than modify original array it makes a shallow copy. 
+
+ arr.slice(2); // returns a copy of arr starting at index 2 till the end. 
+
+ arr.slice(-2); // starts at end and gives last two items
+
+ arr.slice(2, 4); // gives stuff from index 2 to index 4
+
+-----
+
+var tasks, todo, cleanup, noCleaning; 
+
+tasks = [
+	"Fly a kite", 
+	"Save the world", 
+	[
+		"Clean bathroom", 
+		"Clean garage", 
+		"Clean up act"
+		]
+	];
+
+todo = tasks.slice(0); // copies tasks to todo
+cleanup = tasks.slice(-1); // can also do slice(2) // copies nested array
+noCleaning = tasks.slice(0, 2); // copies first two items.
+// does this mean that slice(0,2) doesn't return the item at index 2, but only stuff before it. 
+
+- __toString__ : converts stuff to string
+
+var arr = ["These", "words", "are", "separated", "by", "commas"];
+
+arr.toString(); // returns "These,words,are,separated,by,commas"
+
+
+// in case of arrays and objects, we see a different behaviour: 
+
+var arr = ["a", "b", "c", 100, 200, 300, [1,2,3], {"foo": "bar"}]; // contains numbers, nested arrays, and objects
+
+arr.toString(); // returns "a,b,c,100,200,300,1,2,3, [object Object]" // arrays get flattened, objects get converted to object Object
+
+- __indexOf__ : finds first instance of an item in an array and returns its index to you. does this using strict equality (===). 
+
+array.indexOf(searchElement, [fromIndex]);
+// searchElement is what we are looking for. 
+// if we know that our value occurs after a certain point, we can optionally pass an index from which to begin the search so that we can avoid searching through the whole array. 
+
+var alphabet; 
+
+alplabet = ["a", "b", "c", "d", ....."y", "z"];
+alert("The letter 'm' is at index: " + alplabet.indexOf("m")); // or we can add fromIndex so: ("m", 10));  
+
+
+- __lastIndexOf__ : like indexOf but starts search from the end of the array rather than the beginning of the array . 
+
+array.lastIndexOf(searchElement, [fromIndex]); 
+
+-------
+
+<h6>iteration methods</h6>
+
+- forEach
+

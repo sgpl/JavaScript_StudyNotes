@@ -784,3 +784,6 @@ works like every and some. except that any item that passes your criteria is cop
 		car: "none at the moment"
 	};
 
+<h6>adding to an object</h6>
+
+- 

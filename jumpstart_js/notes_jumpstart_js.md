@@ -786,4 +786,44 @@ works like every and some. except that any item that passes your criteria is cop
 
 <h6>adding to an object</h6>
 
-- 
+	var obj = {};
+
+	obj["firstName"] = "Hugo";
+	obj["lastName"] = "James";
+
+	// the above is called the bracket notation. 
+
+	// can also use the dot notation. 
+
+	var obj = {};
+
+	obj.firstName = "Hugo";
+	obj.lastName = "James";
+
+	// certain tasks can be done with bracket notations only
+	// you can use a variable inside the brackets that can't be used with the dot notation. 
+
+
+<h6>reading from objects </h6>	
+
+	// brackets or dot notation
+
+	var obj = {};
+
+	obj.firstName = "Hugo";
+	obj.lastName = "James";
+	alert("Hello my name is : " + obj.firstName + " "+ obj.lastName + ".");
+
+	// not possible to read contents of objects using a numeric index. 
+
+	var obj = {};
+
+	obj.firstName = "Hugo"; 
+
+	obj[0]; // returns undefined
+	obj["firstName"]; // returns Hugo 
+	obj.firstName; // returns Hugo 
+
+<h5>nested objects</h5>
+
+

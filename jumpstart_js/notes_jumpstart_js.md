@@ -826,4 +826,39 @@ works like every and some. except that any item that passes your criteria is cop
 
 <h5>nested objects</h5>
 
+	// helpful in organizin gdata
 
+	var person;
+
+	person = {
+		name: {
+			first: "Hugo", 
+			last: "James"
+		}
+	};
+
+	person.name.first; // returns Hugo
+	person.name.last; // returns James
+
+	// also possible to assign objects: 
+
+	var person;
+
+	person = {};
+	person.name = {};
+	person.name.first = "Hugo";
+	person.name.last = "James"; 
+
+
+
+	// the following will fail to work 
+
+	var person;
+
+	person = {};
+	person.name.first = "Hugo"; // fails to work 
+
+
+<h5>namespacing through nested objects</h5>	
+
+-  	2

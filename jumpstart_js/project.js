@@ -1,7 +1,7 @@
 var tasks; 
 
 tasks = [
-	"Pay boll", 
+	"Pay bill", 
 	"Write novel", 
 	"Walk dog"
 ];

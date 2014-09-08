@@ -1,0 +1,33 @@
+var d, hours, minutes, time, message;
+
+// get the current time in hours and minutes
+d = new Date();
+hours = d.getHours();
+minutes = d.getMinutes();
+
+if (hours < 10) {
+	hours = "0" + hours; 
+} else {
+	hours = hours.toString();
+}
+
+if (minutes < 10) {
+	minutes = "0" + minutes;
+} else {
+	minutes = minutes.toString();
+}
+
+time = Number(hours + minutes);
+
+if (time >= 0000 && time < 1200) {
+	message = "Good Morning";
+} else if (time >= 1200 && time < 1700) {
+	message = "Good afternoon";
+} else if (time >= 1700 && time < 2100) {
+	message = "Good evening!";
+} else if (time >= 2100 && time < 2359) {
+	message = "Good night";
+}
+
+
+alert(message);

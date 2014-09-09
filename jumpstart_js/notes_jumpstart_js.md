@@ -77,7 +77,7 @@ ssssome stuff
 	complete = true; 
 
 <h6>note</h6> 
-- js is case sensitive so Task != task 
+- JavaScript is case sensitive so Task != task 
 - terminate lines with semi colon ';'
 
 <b>declarations</b>

@@ -29,19 +29,36 @@ bar = bar * 8; // 56
 
 // ----------------
 
-function doSomething(paramOne, paramTwo) {
+// function doSomething(paramOne, paramTwo) {
+// 	paramOne = paramOne + 3; 
+// 	paramOne = paramOne + 1;
+// 	paramOne = paramOne * 8;
+// 	// paramOne = (paramOne + 3 + 1) * 8; 
+// 	// returns undefined as doSomething currently doesn't return stuff
+// 	return paramOne * paramTwo;
+// };
+
+// var foo1 = doSomething(2, 2);
+// var bar1 = doSomething(3, 2);
+// // alert("foo is" + foo1 " and bar is " + bar1);
+// alert("foo1 is " + foo1 + " and bar1 is " + bar1);
+
+// //---------------------
+// // can create functions and assign them to variables in javascript: 
+
+
+// anonymous function. doesn't have a name 
+// can assign it to a variable 
+var doSomething = function(paramOne, paramTwo) {
 	paramOne = paramOne + 3; 
 	paramOne = paramOne + 1;
 	paramOne = paramOne * 8;
 	// paramOne = (paramOne + 3 + 1) * 8; 
 	// returns undefined as doSomething currently doesn't return stuff
 	return paramOne * paramTwo;
-}
+};
 
 var foo1 = doSomething(2, 2);
 var bar1 = doSomething(3, 2);
 // alert("foo is" + foo1 " and bar is " + bar1);
 alert("foo1 is " + foo1 + " and bar1 is " + bar1);
-
-
-// can create functions and assign them to variables in javascript: 

@@ -62,13 +62,15 @@ function sum(paramOne, paramTwo) {
 	return paramOne + paramTwo;
 }
 
-function product(paramOne, paramTwo) {
-	return paramOne * paramTwo;
-}
+// function product(paramOne, paramTwo) {
+// 	return paramOne * paramTwo;
+// }
 
 // calling sum funciton inside of doSomething 
 var foo1 = doSomething(2, 2, sum);
-var bar1 = doSomething(3, 2, product);
+var bar1 = doSomething(3, 2, function(paramOne, paramTwo) {
+	return paramOne * paramTwo;
+// ^^ passing function itself, and this is an anonymous function example. 
 
 alert(foo1);
 alert(bar1);

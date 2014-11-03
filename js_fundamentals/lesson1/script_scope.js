@@ -54,3 +54,14 @@ globalFunction(2);
 
 // alert(localVar); // this results in an error as this is a local variable to the global function
 // alert(globalVar);
+
+
+//----------------
+
+// variable identifier is globalVar
+// variable or function that has same identifier 
+// initially look for globalVar within localFunction, 
+// then move up in the scope chain, and go to globalFunction, 
+// and then go up the scope chain
+// #imp to know how javascript looks up identifiers
+// can override identifiers by defining variables at different levels in the scope chain. 

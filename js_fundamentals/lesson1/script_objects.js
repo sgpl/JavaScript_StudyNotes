@@ -46,3 +46,14 @@ alert(substr2);
 var substring = obj.substring(0,4) // this 
 // second parameter is the index we want to stop at. not included in extracted substring.
 alert(substring);
+
+var newString = obj.replace("object", "sharad is awesome");
+alert(newString);
+// doesn't change the original string object. is case sensitive. 
+
+
+var newString2 = obj.toUpperCase();
+
+var newString3 = obj.toLowerCase();
+
+alert(newString2 + " " + newString3);

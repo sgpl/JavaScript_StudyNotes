@@ -29,21 +29,28 @@
 
 var globalVar = "This is a global variable";
 
-var globalFunction = function(){
+var globalFunction = function(paramOne) {
+
+	var localVar = "This is a local variable";
 
 	var localFunction = function() {
 		var superLocalVar = "Hello World";
 		alert(superLocalVar);
+		alert(localVar);
+		alert(paramOne);
+		alert(globalVar);		
 	};
+
+	localFunction();
  // 	var localVar = "This is a local variable"
 	// alert(localVar);
 	// alert(paramOne);
 	// globalVar = "Value of globalVar has been modified";
-	localFunction();
-	alert(superLocalVar); // results in error as local variable to superLocalVar
+	// localFunction();
+	// alert(superLocalVar); // results in error as local variable to superLocalVar
 };
 
-globalFunction();
+globalFunction(2);
 
-alert(localVar); // this results in an error as this is a local variable to the global function
-alert(globalVar);
+// alert(localVar); // this results in an error as this is a local variable to the global function
+// alert(globalVar);

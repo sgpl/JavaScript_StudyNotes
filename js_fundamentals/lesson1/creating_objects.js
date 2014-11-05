@@ -31,7 +31,9 @@ person.firstName = "Sharad";
 person.lastName = "Gopal";
 
 person.getFullName = function() {
-	return person.firstName + " " + person.lastName;
+	// return person.firstName + " " + person.lastName;
+	return this.firstName + " " + this.lastName; // this (variable) refers to person 
+	// referes to the object that is calling whatever method that it is calling. 
 };
 
 alert(person.getFullName());
